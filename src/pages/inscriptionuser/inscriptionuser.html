@@ -1,0 +1,51 @@
+<ion-header>
+  <ion-navbar>
+    <ion-row>
+      <ion-title>Inscription</ion-title>
+      <button ion-button round outline (click)="closeView()">Fermer</button>
+    </ion-row>
+
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+  <ion-item>
+    <ion-label floating>M/Mme</ion-label>
+    <ion-input type="text" name="nom" [(ngModel)]="nom"required></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label floating>Prénom</ion-label>
+    <ion-input type="text" name="prenom" [(ngModel)]="prenom"required></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label floating>Adresse Complète</ion-label>
+    <ion-input type="text" name="adresse" [(ngModel)]="adresse"required></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label floating>Téléphone</ion-label>
+    <ion-input type="number" name="tel" [(ngModel)]="tel"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label floating>Mail</ion-label>
+    <ion-input type="email" name="mail" required [(ngModel)]="mail"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label floating>Date de naissance</ion-label>
+    <ion-input type="date" name="dateborn" required [(ngModel)]="dateborn"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label floating>Mot de passe</ion-label>
+    <ion-input type="password" name="password" [(ngModel)]="password"></ion-input>
+  </ion-item>
+  <ion-item>
+    <re-captcha (resolved)="captchaResolved($event)" siteKey="6LeUKWAUAAAAALe7ILWljSB5Yen5D9_bApLEplEU"></re-captcha>
+  </ion-item>
+  <ion-item>
+    <button ion-button (click)="validateInscription()" [disabled]="!captchaPassed">Valider les informations</button>
+  </ion-item>
+  
+
+
+</ion-content>

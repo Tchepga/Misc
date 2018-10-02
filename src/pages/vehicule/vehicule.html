@@ -1,0 +1,57 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Ajouter véhicule</ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content>
+  <ion-list>
+    <ion-item>
+      <ion-label floating>Immatriculation</ion-label>
+      <ion-input type="text" name="immat" [(ngModel)]="immat"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label floating>Marque</ion-label>
+      <ion-input type="text" name="marque" [(ngModel)]="marque"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label floating>Modèle</ion-label>
+      <ion-input type="text" name="model" [(ngModel)]="modele"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label floating>Année de fabrication</ion-label>
+      <ion-input type="date" name="modelyear" [(ngModel)]="anneemodele"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label floating>Poids total charge</ion-label>
+      <ion-input type="num" name="poidscharge" [(ngModel)]="poidscharge"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label floating>Poids à vide</ion-label>
+      <ion-input type="num" name="poidsvide" [(ngModel)]="poidsvide"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label floating>Capacité personne</ion-label>
+      <ion-input type="num" name="cappersonne" [(ngModel)]="cap"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label floating>volume transport</ion-label>
+      <ion-input type="num" name="volume" [(ngModel)]="volume"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label floating>Kilométrage</ion-label>
+      <ion-input type="num" name="kilometrage" [(ngModel)]="km"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Type de transport</ion-label>
+      <ion-select [(ngModel)]="type">
+        <ion-option value="france">transport en commun</ion-option>
+        <ion-option value="other">transport de marchandise</ion-option>
+        <ion-option value="other">transport de personnel</ion-option>
+      </ion-select>
+    </ion-item>
+    <button ion-button (click)="addVehicule()">Valider les informations</button>
+
+
+  </ion-list>
+</ion-content>

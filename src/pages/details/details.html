@@ -1,0 +1,50 @@
+<ion-header>
+    <ion-navbar>
+        <ion-row>
+            <ion-title>Détails</ion-title>
+            <button ion-button round outline (click)="closeDetails()">Fermer</button>
+        </ion-row>
+    </ion-navbar>
+  </ion-header>
+<ion-content>
+  <ion-list padding>
+    <ion-item>
+      <ion-label>Catégorie produit</ion-label>
+
+      <ion-select [(ngModel)]="type">
+        <ion-option value="standard">standard</ion-option>
+        <ion-option value="fragile">fragile</ion-option>
+        <ion-option value="autre">Autres</ion-option>
+      </ion-select>
+    </ion-item>
+    <ion-item>
+        <ion-label>Type emballage</ion-label>
+    <ion-select [(ngModel)]="emballage">
+      <ion-option value="perso">Personnalisé</ion-option>
+      <ion-option value="pro">Transporteur</ion-option>
+    </ion-select>
+  </ion-item>
+    <ion-item>
+      <ion-label floating>Poids</ion-label>
+      <ion-input type="number" name="poids"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label floating>Longueur</ion-label>
+      <ion-input type="number" name="lenght"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label floating>Largeur</ion-label>
+      <ion-input type="number" name="large"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label floating>Epaisseur</ion-label>
+      <ion-input type="number" name="depht"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label floating>Valeur estimative</ion-label>
+      <ion-input type="text" name="priceValue"></ion-input>
+    </ion-item>
+
+    <button ion-button (click)="resumeColis()">Valider les informations</button>
+  </ion-list>
+</ion-content>

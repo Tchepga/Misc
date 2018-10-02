@@ -1,0 +1,55 @@
+<ion-list>
+
+  <ion-list radio-group>
+    <ion-row>
+      <ion-item col-4>
+        <ion-radio value="information" checked></ion-radio>
+      </ion-item>
+      <ion-item col-3>
+        <ion-radio value="colis"></ion-radio>
+      </ion-item >
+      <ion-item col-3>
+        <ion-radio value="recapitulatif" [disabled]="isDisabled"></ion-radio>
+      </ion-item>
+    </ion-row>
+  </ion-list>
+  <div padding>
+    <h2>
+      <strong> Vos informations </strong>
+    </h2>
+  </div>
+  <ion-item>
+    <ion-label>Pays de livraison</ion-label>
+    <ion-select [(ngModel)]="pays">
+      <ion-option value="france">France Métropolitaine</ion-option>
+      <ion-option value="other">Autres</ion-option>
+    </ion-select>
+  </ion-item>
+  <ion-item>
+    <ion-label floating>Société ou Nom de contact</ion-label>
+    <ion-input type="text" name="departure"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label floating>Adresse électronique</ion-label>
+    <ion-input type="text" name="departure"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label floating>Point d'enlèvement</ion-label>
+    <ion-input type="text" name="departure"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label floating>Point de livraison</ion-label>
+    <ion-input type="text" name="destination"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label floating>Date de ramassage</ion-label>
+    <ion-input type="date" name="startDate"></ion-input>
+  </ion-item>
+  <button ion-button id="detailsColis" color="light" (tap)="showDetailsColis()" icon-start style="margin:0 auto; margin-top:15px;">
+
+    <ion-icon name="arrow-round-forward"></ion-icon>Détails sur le colis
+  </button>
+
+</ion-list>

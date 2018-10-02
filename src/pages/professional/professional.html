@@ -1,0 +1,67 @@
+<ion-header>
+
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Professionnel</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-toolbar>
+    <ion-segment [(ngModel)]="pet" color="primary">
+      <ion-segment-button value="information">
+        Vos informations
+      </ion-segment-button>
+      <ion-segment-button value="driver">
+        Chauffeurs
+      </ion-segment-button>
+      <ion-segment-button value="vehicule">
+        Véhicules
+      </ion-segment-button>
+    </ion-segment>
+  </ion-toolbar>
+  
+
+  <div [ngSwitch]="pet">
+    <ion-list *ngSwitchCase="'information'">
+      <div margin>
+         <h3>Vos informations</h3>
+        <ion-item>Nom : </ion-item>
+        <ion-item>Prénom: </ion-item>
+        <ion-item>Adresse Complète: </ion-item>
+        <ion-item>Téléphone: </ion-item>
+        <ion-item>Mail</ion-item>
+        <ion-item>Statut :</ion-item>
+        
+        <button ion-button>modifier</button>
+    
+
+      </div>
+
+
+    </ion-list>
+
+    <ion-list *ngSwitchCase="'driver'">
+      <div>
+
+        <page-listdriver></page-listdriver>
+
+      </div>
+
+
+    </ion-list>
+    <ion-list *ngSwitchCase="'vehicule'">
+      <div>
+
+        <page-listvehicule></page-listvehicule>
+
+      </div>
+
+
+    </ion-list>
+  </div>
+
+</ion-content>

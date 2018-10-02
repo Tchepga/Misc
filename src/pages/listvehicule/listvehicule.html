@@ -1,0 +1,16 @@
+
+  <ion-list>
+      <ion-searchbar (ionInput)="getItems($event)"></ion-searchbar>
+      <ion-list>
+          <button ion-item>
+               Véhicule 1
+          </button>
+          <button ion-item>
+                Véhicule 2
+         </button>  
+         <button ion-item>
+                Véhicule 3
+       </button>
+       <button ion-button (click)="addVehicule()">Ajouter</button>
+       </ion-list>
+  </ion-list>

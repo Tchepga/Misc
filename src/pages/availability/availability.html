@@ -1,0 +1,39 @@
+<ion-header>
+    <ion-navbar>
+      <ion-row>
+          <ion-title>Résumé prestation</ion-title>
+          <button ion-button round outline (click)="closeResume()">Fermer</button>
+      </ion-row>
+     
+    </ion-navbar>
+    
+</ion-header>
+
+
+<ion-content>
+  <ion-item>
+    <ion-label floating>Jour</ion-label>
+    <ion-input type="date" name="day"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label floating>De :</ion-label>
+    <ion-input type="num" name="start"></ion-input>
+    <ion-label floating>A :</ion-label>
+    <ion-input type="num" name="end"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label floating>Départ</ion-label>
+    <ion-input type="text" name="departure"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label floating>Arrivée</ion-label>
+    <ion-input type="text" name="endpoint"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label floating>Saississez le numéro de suivi</ion-label>
+    <ion-input type="text" name="numcolis"></ion-input>
+  </ion-item>
+  <button ion-button>Valider les informations</button>
+
+
+</ion-content>

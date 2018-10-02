@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-navbar>
+    <ion-row>
+      <ion-col col-5 col-lg-5>
+        <button style="width: 100%" ion-button outline icon-only padding (click)="showProfil()">
+
+          <ion-icon name="person"></ion-icon>
+          profil
+        </button>
+      </ion-col>
+      <ion-col col-7 col-lg-7>
+        <button style="width: 100%" ion-button outline icon-only padding id="buttontest" (click)="showPrestation()">
+          <ion-icon name="alert"></ion-icon>
+          demandes
+        </button>
+      </ion-col>
+
+
+    </ion-row>
+  </ion-navbar>
+</ion-header>
+<ion-content>
+<h3 style="text-align: center;"> Espace client</h3>
+<div class="scroll-content">
+  <ion-row padding style="height: 800px;">
+
+    <ion-col col-12>
+      <ion-nav #navclient [root]="contentProfil"></ion-nav>
+    </ion-col>
+
+</ion-row>
+</div>
+</ion-content>

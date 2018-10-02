@@ -1,0 +1,72 @@
+<ion-content >
+   
+      <ion-row style=" height: 700px;">
+        <ion-col id="message" col-12 col-lg-12>
+          <div>
+  
+            <ion-toolbar>
+              <ion-segment [(ngModel)]="pet" color="primary">
+                <ion-segment-button value="user">
+                  Usager
+                </ion-segment-button>
+                <ion-segment-button value="c2c">
+                  C2C
+                </ion-segment-button>
+              </ion-segment>
+            </ion-toolbar>
+          </div>
+  
+          <div [ngSwitch]="pet">
+            <ion-list *ngSwitchCase="'user'"style="background-color: #2787B0;" >
+              <div>
+  
+                <ion-segment [(ngModel)]="usercase" color="light" ngSelected="selected">
+                  <ion-segment-button value="itineraire"  id="cases">
+                    Itinéraire
+                  </ion-segment-button>
+                  <ion-segment-button value="send" >
+                    Préstation
+                  </ion-segment-button>
+                  <ion-segment-button value="follow">
+                    suivre un colis
+                  </ion-segment-button>
+                </ion-segment>
+              </div>
+              <div [ngSwitch]="usercase" >
+                <ion-list *ngSwitchCase="'itineraire'"  >
+                  <ion-item>
+                    <page-itineraire ></page-itineraire>
+                  </ion-item>
+                </ion-list>
+                <ion-list *ngSwitchCase="'send'">
+                  <ion-item>
+                    <page-colis></page-colis>
+                  </ion-item>
+                </ion-list>
+                <ion-list *ngSwitchCase="'follow'" >
+                  <ion-item>
+                    <page-follow></page-follow>
+                  </ion-item>
+                </ion-list>
+              </div>
+  
+  
+            </ion-list>
+  
+            <ion-list *ngSwitchCase="'c2c'">
+              <ion-item>
+                <ion-list>
+                  <page-ctwoc></page-ctwoc>
+                </ion-list>
+              </ion-item>
+  
+            </ion-list>
+          </div>
+        </ion-col>
+  
+      </ion-row>
+    
+    
+  
+  </ion-content>
+  

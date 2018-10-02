@@ -1,0 +1,44 @@
+<ion-header>
+    <ion-navbar>
+      <ion-row>
+        <ion-title>Ajouter Chauffeur</ion-title>
+        <button ion-button round outline (click)="closeView()">Fermer</button>
+      </ion-row>
+  
+    </ion-navbar>
+  
+  </ion-header>
+  
+  
+  <ion-content>
+    <ion-item>
+      <ion-label floating>M/Mme</ion-label>
+      <ion-input type="text" name="nom" [(ngModel)]="nom" required></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label floating>Prénom</ion-label>
+      <ion-input type="text" name="prenom" [(ngModel)]="prenom" required></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label floating>num et nom voie</ion-label>
+      <ion-input type="text" name="adresse" [(ngModel)]="num" required></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label floating>Code postal</ion-label>
+      <ion-input type="text" name="cpchauf" [(ngModel)]="cp" required></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label floating>Ville</ion-label>
+      <ion-input type="text" name="villechauf" [(ngModel)]="ville" required></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label floating>Téléphone</ion-label>
+      <ion-input type="text" name="tel" [(ngModel)]="tel"></ion-input>
+    </ion-item>
+    <ion-item>
+      <button ion-button (click)="addChauffeur()" >Valider les informations</button>
+    </ion-item>
+    
+  
+  
+  </ion-content>

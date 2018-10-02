@@ -1,0 +1,34 @@
+<ion-header>
+
+  <ion-navbar>
+    
+        
+      <button ion-button menuToggle col-7>
+          <ion-icon name="menu"></ion-icon>
+          <ion-title>Particuliers</ion-title>
+      </button>
+       
+      <button ion-button round outline style="float:right" (click)="openspace()">
+          <ion-icon name="contact" ></ion-icon>
+        
+       </button>
+
+  </ion-navbar>
+
+
+
+</ion-header>
+<ion-row style="margin-top: 60px">
+
+  
+    <ion-col  col-lg-6 col-12 style="min-height: 400px;">
+        <ion-nav #navContent [root]="contentParticular"></ion-nav>
+    </ion-col>
+    <ion-col  col-lg-6 col-12>
+        <div id="map" style="width:100%; min-height: 700px;"></div>
+    </ion-col>
+   
+
+</ion-row>
+
+
